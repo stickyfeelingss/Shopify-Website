@@ -1,0 +1,260 @@
+{% comment %} Contact Us — Talk to Us + FAQ accordion {% endcomment %}
+{{ 'sf-contact.css' | asset_url | stylesheet_tag }}
+
+<div class="sf-contact-page">
+
+  {%- comment -%}── TALK TO US ────────────────────────────────────────{%- endcomment -%}
+  <section class="sf-talk-section" aria-labelledby="sf-talk-heading">
+    <h2 class="sf-section-label" id="sf-talk-heading">Talk to Us</h2>
+    <div class="sf-talk-grid">
+
+      <div class="sf-talk-col">
+        <h3>B2B and Collaborations</h3>
+        <p>Let's build something meaningful together and collaborate</p>
+        <p class="sf-subject-intro">Email us with the subject line</p>
+        <p class="sf-subject-line">"Your Brand X Sticky Feelings"</p>
+        <button
+          class="sf-copy-btn"
+          data-email="hello@stickyfeelings.in"
+          data-subject="YOUR BRAND X STICKY FEELINGS"
+          aria-label="Copy email address for B2B enquiries"
+        >
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy Email
+        </button>
+      </div>
+
+      <div class="sf-talk-col">
+        <h3>Careers and Freelance Network</h3>
+        <p>Want to grow with us and make emotional tools for the world?</p>
+        <p class="sf-subject-intro">Email us here with the subject line</p>
+        <p class="sf-subject-line">"Work With Sticky Feelings"</p>
+        <button
+          class="sf-copy-btn"
+          data-email="hello@stickyfeelings.in"
+          data-subject="WORK WITH STICKY FEELINGS"
+          aria-label="Copy email address for careers enquiries"
+        >
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy Email
+        </button>
+      </div>
+
+      <div class="sf-talk-col">
+        <h3>General Help and Queries</h3>
+        <p>Questions, thoughts, little confusions — we're listening.</p>
+        <p class="sf-subject-intro">Email us with the subject line</p>
+        <p class="sf-subject-line">"#Order Number, Need Help With…."</p>
+        <button
+          class="sf-copy-btn"
+          data-email="hello@stickyfeelings.in"
+          data-subject="#ORDER NUMBER, NEED HELP WITH"
+          aria-label="Copy email address for general help"
+        >
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy Email
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  {%- comment -%}── FAQ ───────────────────────────────────────────────{%- endcomment -%}
+  <section class="sf-faq-section" aria-labelledby="sf-faq-heading">
+    <h2 class="sf-section-label" id="sf-faq-heading">Frequently Asked Questions</h2>
+    <p class="sf-faq-intro">We have answered some of your most frequently asked questions below.</p>
+
+    <div class="sf-faq-list">
+
+      {%- comment -%} PRODUCT {%- endcomment -%}
+      <div class="sf-faq-category">
+        <button class="sf-faq-category-btn" aria-expanded="false">
+          Product
+          <svg class="sf-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="sf-faq-panel" hidden>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              What is The Emotional Juice Box?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>The Emotional Juice Box is a set of thoughtfully prompted cards designed for quick, honest emotional check-ins. It comes as a full set of four packs (Inside Scoop, Shake it Up, Sip and Reflect, and Energy Bites) or you can buy each pack individually.</div>
+          </div>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              Are the notebooks blank or lined?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>Each notebook has themed pages designed to match its cover — some are lined, some have prompts, and some are a mix. The format is chosen to suit the headspace of that particular notebook.</div>
+          </div>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              Can I buy products as gifts?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>Absolutely. All our products make wonderful gifts. If you'd like a handwritten note included, mention it in your order notes and we'll do our best to make it happen.</div>
+          </div>
+        </div>
+      </div>
+
+      {%- comment -%} PAYMENTS {%- endcomment -%}
+      <div class="sf-faq-category">
+        <button class="sf-faq-category-btn" aria-expanded="false">
+          Payments
+          <svg class="sf-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="sf-faq-panel" hidden>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              What payment methods do you accept?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>We accept all major credit and debit cards, UPI, net banking, and wallets. Payments are processed securely through Shopify Payments.</div>
+          </div>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              Is it safe to pay on your website?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>Yes, completely. Our store runs on Shopify, which uses industry-standard SSL encryption. We never store your card details.</div>
+          </div>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              Do you offer Cash on Delivery?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>Currently we do not offer Cash on Delivery. We accept all major online payment methods including UPI and cards.</div>
+          </div>
+        </div>
+      </div>
+
+      {%- comment -%} RETURNS {%- endcomment -%}
+      <div class="sf-faq-category">
+        <button class="sf-faq-category-btn" aria-expanded="false">
+          Returns, Refunds &amp; Cancellations
+          <svg class="sf-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="sf-faq-panel" hidden>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              What is your return policy?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>We accept returns within 7 days of delivery if the product is damaged or defective. Please email us at hello@stickyfeelings.in with your order number and photos of the issue.</div>
+          </div>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              Can I cancel my order?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>Orders can be cancelled within 24 hours of placing them. After that, they may already be packed and on their way to you. Email us as soon as possible if you need to cancel.</div>
+          </div>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              How long do refunds take?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>Once a refund is approved, it typically takes 5–7 business days to reflect in your account, depending on your bank or payment provider.</div>
+          </div>
+        </div>
+      </div>
+
+      {%- comment -%} ORDERS & SHIPPING {%- endcomment -%}
+      <div class="sf-faq-category">
+        <button class="sf-faq-category-btn" aria-expanded="false">
+          Orders &amp; Shipping
+          <svg class="sf-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="sf-faq-panel" hidden>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              How long does delivery take?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>Orders are typically dispatched within 2–3 business days. Delivery within India usually takes 5–8 business days depending on your location.</div>
+          </div>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              Do you ship internationally?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>Not yet, but we're working on it! Right now we ship within India. Sign up to the Sticky Circle to be the first to know when international shipping opens up.</div>
+          </div>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              How do I track my order?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>Once your order is dispatched, you'll receive a tracking link by email. You can also log into your account to check your order status at any time.</div>
+          </div>
+        </div>
+      </div>
+
+      {%- comment -%} GENERAL {%- endcomment -%}
+      <div class="sf-faq-category">
+        <button class="sf-faq-category-btn" aria-expanded="false">
+          General
+          <svg class="sf-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="sf-faq-panel" hidden>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              What is Sticky Feelings?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>Sticky Feelings is an emotional stationery brand built around the belief that emotional honesty is a superpower. We make products — cards, notebooks, pads — that help you sit with your feelings, not run from them.</div>
+          </div>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              Where can I follow you?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>You can find us on Instagram. We share behind-the-scenes, new product drops, and the occasional emotional truth. Give us a follow — we'd love to see you there.</div>
+          </div>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              How do I stay updated on new launches?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>Join the <a href="/pages/sticky-circle">Sticky Circle waitlist</a> — members get first access to everything before it goes public.</div>
+          </div>
+        </div>
+      </div>
+
+      {%- comment -%} B2B {%- endcomment -%}
+      <div class="sf-faq-category">
+        <button class="sf-faq-category-btn" aria-expanded="false">
+          B2B, Custom Orders &amp; Collaborations
+          <svg class="sf-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="sf-faq-panel" hidden>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              Do you take bulk or corporate orders?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>Yes! We love working with organisations, teams, and events. Email us at hello@stickyfeelings.in with the subject line "YOUR BRAND X STICKY FEELINGS" and tell us what you have in mind.</div>
+          </div>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              Can products be customised with our branding?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>We do explore co-branded collaborations on a case-by-case basis. Reach out with your idea and we'll see if it's a good fit for both of us.</div>
+          </div>
+          <div class="sf-faq-item">
+            <button class="sf-faq-q-btn" aria-expanded="false">
+              How do I get in touch for a collaboration?
+              <svg class="sf-faq-q-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="sf-faq-answer" hidden>Email hello@stickyfeelings.in with the subject line "YOUR BRAND X STICKY FEELINGS". Tell us who you are, what you do, and what you're imagining — we read every single one.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<script src="{{ 'sf-contact.js' | asset_url }}" defer></script>
