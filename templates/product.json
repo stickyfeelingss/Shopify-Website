@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
@@ -24,7 +15,7 @@
             "slideshow_controls_style": "counter",
             "slideshow_mobile_controls_style": "dots",
             "thumbnail_position": "bottom",
-            "thumbnail_width": 80,
+            "thumbnail_width": 72,
             "aspect_ratio": "adapt",
             "constrain_to_viewport": true,
             "media_fit": "contain",
@@ -71,7 +62,7 @@
               "type": "text",
               "name": "LIMITED EDITION badge",
               "settings": {
-                "text": "<span class=\"sf-badge-limited\">LIMITED EDITION</span>",
+                "text": "<p>LIMITED EDITION</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -97,7 +88,7 @@
               "type": "text",
               "name": "Star rating",
               "settings": {
-                "text": "<div class=\"sf-stars-row\"><svg viewBox=\"0 0 20 20\" fill=\"#f5c518\" width=\"18\" height=\"18\"><path d=\"M10 1.5l2.47 5 5.53.8-4 3.9.94 5.5L10 14.27l-4.94 2.53.94-5.5-4-3.9 5.53-.8L10 1.5z\"/></svg><svg viewBox=\"0 0 20 20\" fill=\"#f5c518\" width=\"18\" height=\"18\"><path d=\"M10 1.5l2.47 5 5.53.8-4 3.9.94 5.5L10 14.27l-4.94 2.53.94-5.5-4-3.9 5.53-.8L10 1.5z\"/></svg><svg viewBox=\"0 0 20 20\" fill=\"#f5c518\" width=\"18\" height=\"18\"><path d=\"M10 1.5l2.47 5 5.53.8-4 3.9.94 5.5L10 14.27l-4.94 2.53.94-5.5-4-3.9 5.53-.8L10 1.5z\"/></svg><svg viewBox=\"0 0 20 20\" fill=\"#f5c518\" width=\"18\" height=\"18\"><path d=\"M10 1.5l2.47 5 5.53.8-4 3.9.94 5.5L10 14.27l-4.94 2.53.94-5.5-4-3.9 5.53-.8L10 1.5z\"/></svg><svg viewBox=\"0 0 20 20\" fill=\"#f5c518\" width=\"18\" height=\"18\"><path d=\"M10 1.5l2.47 5 5.53.8-4 3.9.94 5.5L10 14.27l-4.94 2.53.94-5.5-4-3.9 5.53-.8L10 1.5z\"/></svg>&nbsp;<span class=\"sf-rating-label\">4.5/<span>5</span></span></div>",
+                "text": "<p>4.5 / 5 stars</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -171,7 +162,7 @@
               "type": "text",
               "name": "Short description",
               "settings": {
-                "text": "100 prompt cards across 4 categories, designed to help you pause, process, and express without it feeling heavy. No rules, no routines. Just reach in, pull a card, and see what moves.",
+                "text": "<p>100 prompt cards across 4 categories, designed to help you pause, process, and express without it feeling heavy. No rules, no routines. Just reach in, pull a card, and see what moves.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -251,11 +242,13 @@
                     "text_inside": {
                       "type": "text",
                       "settings": {
-                        "text": "100 prompt cards across 4 categories — Energy Bites, Sip & Reflect, Inside Scoop, and Wild Cards. Each card is designed to gently open you up at your own pace."
+                        "text": "<p>100 prompt cards across 4 categories \u2014 Energy Bites, Sip & Reflect, Inside Scoop, and Wild Cards. Each card is designed to gently open you up at your own pace.</p>"
                       }
                     }
                   },
-                  "block_order": ["text_inside"]
+                  "block_order": [
+                    "text_inside"
+                  ]
                 },
                 "acc_description": {
                   "type": "_accordion-row",
@@ -266,11 +259,13 @@
                     "text_desc": {
                       "type": "text",
                       "settings": {
-                        "text": "{{ closest.product.description }}"
+                        "text": "<p>{{ closest.product.description }}</p>"
                       }
                     }
                   },
-                  "block_order": ["text_desc"]
+                  "block_order": [
+                    "text_desc"
+                  ]
                 },
                 "acc_shipping": {
                   "type": "_accordion-row",
@@ -281,14 +276,20 @@
                     "text_ship": {
                       "type": "text",
                       "settings": {
-                        "text": "We ship across India in 5–7 business days. Free shipping on orders above ₹999. Returns accepted within 7 days of delivery for sealed/unopened products."
+                        "text": "<p>We ship across India in 5\u20137 business days. Free shipping on orders above \u20b9999. Returns accepted within 7 days of delivery for sealed/unopened products.</p>"
                       }
                     }
                   },
-                  "block_order": ["text_ship"]
+                  "block_order": [
+                    "text_ship"
+                  ]
                 }
               },
-              "block_order": ["acc_whats_inside", "acc_description", "acc_shipping"]
+              "block_order": [
+                "acc_whats_inside",
+                "acc_description",
+                "acc_shipping"
+              ]
             }
           },
           "block_order": [
@@ -430,10 +431,16 @@
               "blocks": {}
             }
           },
-          "block_order": ["gallery", "title", "price"]
+          "block_order": [
+            "gallery",
+            "title",
+            "price"
+          ]
         }
       },
-      "block_order": ["text_header"],
+      "block_order": [
+        "text_header"
+      ],
       "name": "Product recommendations",
       "settings": {
         "product": "{{ closest.product }}",
@@ -455,5 +462,9 @@
       }
     }
   },
-  "order": ["main", "sf_below_fold", "product_recommendations"]
+  "order": [
+    "main",
+    "sf_below_fold",
+    "product_recommendations"
+  ]
 }
