@@ -1,0 +1,277 @@
+/* ── Hotline page ─────────────────────────────────────────────── */
+.sf-hotline-page {
+  --yellow: #fff176;
+  --pink:   #f8bbd0;
+  --blue:   #b3e5fc;
+  --green:  #c8e6c9;
+  --purple: #e1bee7;
+  min-height: 100vh;
+  font-family: inherit;
+}
+
+.sf-hotline-header {
+  text-align: center;
+  padding: 4rem 1.5rem 2rem;
+  background: #fffde7;
+  border-bottom: 2px dashed #ffe082;
+}
+
+.sf-hotline-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.sf-hotline-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+}
+
+.sf-btn-add {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.sf-btn-add:hover { background: #444; transform: translateY(-1px); }
+.sf-btn-add:active { transform: translateY(0); }
+
+/* ── Board ─────────────────────────────────────────────────────── */
+.sf-hotline-board {
+  position: relative;
+  min-height: 700px;
+  background: #fafafa url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e0e0e0' fill-opacity='0.6'%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3C/g%3E%3C/svg%3E") repeat;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* ── Sticky notes ──────────────────────────────────────────────── */
+.sf-note {
+  position: absolute;
+  width: clamp(130px, 18vw, 180px);
+  min-height: 120px;
+  padding: 1rem;
+  border-radius: 2px;
+  box-shadow: 3px 4px 10px rgba(0,0,0,0.15);
+  transform: rotate(var(--rotate, 0deg));
+  transition: transform 0.2s, box-shadow 0.2s, z-index 0s;
+  cursor: default;
+  z-index: 1;
+  word-break: break-word;
+}
+.sf-note:hover {
+  transform: rotate(0deg) scale(1.06);
+  box-shadow: 6px 8px 20px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.sf-note p { margin: 0; font-size: 0.9rem; line-height: 1.5; }
+
+.sf-note--yellow { background: var(--yellow); }
+.sf-note--pink   { background: var(--pink); }
+.sf-note--blue   { background: var(--blue); }
+.sf-note--green  { background: var(--green); }
+.sf-note--purple { background: var(--purple); }
+
+/* Dynamic notes added via JS */
+.sf-note--dynamic {
+  animation: sf-pop-in 0.35s cubic-bezier(0.34,1.56,0.64,1) forwards;
+}
+@keyframes sf-pop-in {
+  from { opacity: 0; transform: rotate(var(--rotate, 0deg)) scale(0.5); }
+  to   { opacity: 1; transform: rotate(var(--rotate, 0deg)) scale(1); }
+}
+
+.sf-note--has-drawing {
+  width: clamp(160px, 22vw, 220px);
+  min-height: 150px;
+}
+.sf-note--has-drawing img {
+  width: 100%;
+  border-radius: 2px;
+  display: block;
+}
+
+/* ── Modal ─────────────────────────────────────────────────────── */
+.sf-hotline-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+.sf-hotline-modal.is-open { display: flex; align-items: center; justify-content: center; }
+
+.sf-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(4px);
+}
+
+.sf-modal-content {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  width: min(520px, calc(100vw - 2rem));
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+.sf-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #888;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: background 0.15s;
+}
+.sf-modal-close:hover { background: #f0f0f0; color: #222; }
+
+.sf-modal-heading {
+  margin: 0 0 1.25rem;
+  font-size: 1.4rem;
+}
+
+/* ── Colour picker ─────────────────────────────────────────────── */
+.sf-color-picker {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.sf-color-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s;
+}
+.sf-color-btn:hover { transform: scale(1.15); }
+.sf-color-btn.is-active { border-color: #222; transform: scale(1.1); }
+.sf-color-btn--yellow { background: #fff176; }
+.sf-color-btn--pink   { background: #f8bbd0; }
+.sf-color-btn--blue   { background: #b3e5fc; }
+.sf-color-btn--green  { background: #c8e6c9; }
+.sf-color-btn--purple { background: #e1bee7; }
+
+/* ── Tabs ──────────────────────────────────────────────────────── */
+.sf-tabs {
+  display: flex;
+  gap: 0.25rem;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 1rem;
+}
+.sf-tab {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #888;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.sf-tab.is-active { color: #222; border-bottom-color: #222; font-weight: 600; }
+.sf-tab:hover:not(.is-active) { color: #444; }
+
+.sf-panel { display: none; }
+.sf-panel.is-active { display: block; }
+
+/* ── Textarea ──────────────────────────────────────────────────── */
+.sf-textarea {
+  width: 100%;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+.sf-textarea:focus { outline: none; border-color: #222; }
+
+.sf-char-count {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 0.25rem;
+}
+
+/* ── Drawing canvas ────────────────────────────────────────────── */
+.sf-canvas-wrap {
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: crosshair;
+  background: #fff;
+  touch-action: none;
+}
+#sf-draw-canvas { display: block; width: 100%; }
+
+.sf-draw-tools {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.sf-tool-btn {
+  padding: 0.35rem 0.75rem;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.15s, border-color 0.15s;
+}
+.sf-tool-btn:hover { background: #f5f5f5; }
+.sf-tool-btn.is-active { background: #222; color: #fff; border-color: #222; }
+
+/* ── Submit ────────────────────────────────────────────────────── */
+.sf-btn-submit {
+  display: block;
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.85rem;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.sf-btn-submit:hover { background: #444; }
+.sf-btn-submit:active { transform: scale(0.99); }
+
+.sf-disclaimer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #aaa;
+  margin: 0.75rem 0 0;
+}
+
+/* ── Mobile tweaks ─────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .sf-hotline-board { min-height: 900px; }
+  .sf-note { width: 120px; min-height: 100px; font-size: 0.8rem; }
+}

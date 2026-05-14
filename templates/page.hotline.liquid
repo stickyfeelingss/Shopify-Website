@@ -1,0 +1,88 @@
+{% comment %} The Hotline — sticky note canvas page {% endcomment %}
+{{ 'sf-hotline.css' | asset_url | stylesheet_tag }}
+
+<div class="sf-hotline-page">
+  <div class="sf-hotline-header">
+    <h1 class="sf-hotline-title">The Hotline</h1>
+    <p class="sf-hotline-subtitle">This is your space. Write it, draw it, leave it here.<br>No judgment. Just feelings.</p>
+    <button class="sf-btn-add" id="sf-add-note-btn" aria-label="Leave a note">+ Leave a note</button>
+  </div>
+
+  <div class="sf-hotline-board" id="sf-hotline-board" aria-label="Sticky note board">
+    {%- comment -%} Seed notes — replace or extend as the board fills up {%- endcomment -%}
+    <div class="sf-note sf-note--yellow" style="top:9%;left:6%;--rotate:-3deg">
+      <p>you're doing better than you think 💛</p>
+    </div>
+    <div class="sf-note sf-note--pink" style="top:18%;left:32%;--rotate:2deg">
+      <p>it's okay to just exist today</p>
+    </div>
+    <div class="sf-note sf-note--blue" style="top:8%;left:58%;--rotate:-1.5deg">
+      <p>i don't know how to say this but here goes nothing</p>
+    </div>
+    <div class="sf-note sf-note--green" style="top:44%;left:12%;--rotate:1.5deg">
+      <p>some days are just hard. and that's valid.</p>
+    </div>
+    <div class="sf-note sf-note--purple" style="top:48%;left:46%;--rotate:-2deg">
+      <p>the version of you from 5 years ago would be proud ✨</p>
+    </div>
+    <div class="sf-note sf-note--yellow" style="top:62%;left:72%;--rotate:3deg">
+      <p>hi. just wanted to check in. 👋</p>
+    </div>
+    <div class="sf-note sf-note--pink" style="top:30%;left:75%;--rotate:-1deg">
+      <p>not everything needs a reason. sometimes you just feel it.</p>
+    </div>
+    <div class="sf-note sf-note--blue" style="top:68%;left:28%;--rotate:2.5deg">
+      <p>breathe. you got this. 🫁</p>
+    </div>
+    <div id="sf-dynamic-notes"></div>
+  </div>
+</div>
+
+<div class="sf-hotline-modal" id="sf-hotline-modal" role="dialog" aria-modal="true" aria-labelledby="sf-modal-heading" aria-hidden="true">
+  <div class="sf-modal-backdrop" id="sf-modal-backdrop"></div>
+  <div class="sf-modal-content">
+    <button class="sf-modal-close" id="sf-modal-close" aria-label="Close">&#x2715;</button>
+    <h2 class="sf-modal-heading" id="sf-modal-heading">Leave your note</h2>
+
+    <div class="sf-color-picker" role="group" aria-label="Pick a note colour">
+      <button class="sf-color-btn sf-color-btn--yellow is-active" data-color="yellow" aria-label="Yellow" aria-pressed="true"></button>
+      <button class="sf-color-btn sf-color-btn--pink"   data-color="pink"   aria-label="Pink"   aria-pressed="false"></button>
+      <button class="sf-color-btn sf-color-btn--blue"   data-color="blue"   aria-label="Blue"   aria-pressed="false"></button>
+      <button class="sf-color-btn sf-color-btn--green"  data-color="green"  aria-label="Green"  aria-pressed="false"></button>
+      <button class="sf-color-btn sf-color-btn--purple" data-color="purple" aria-label="Purple" aria-pressed="false"></button>
+    </div>
+
+    <div class="sf-tabs" role="tablist">
+      <button class="sf-tab is-active" data-tab="type" role="tab" aria-selected="true"  aria-controls="sf-panel-type">Type</button>
+      <button class="sf-tab"           data-tab="draw" role="tab" aria-selected="false" aria-controls="sf-panel-draw">Draw</button>
+    </div>
+
+    <div id="sf-panel-type" class="sf-panel is-active" role="tabpanel">
+      <textarea
+        id="sf-note-text"
+        class="sf-textarea"
+        placeholder="Write whatever's on your mind…"
+        maxlength="200"
+        rows="5"
+        aria-label="Note text"
+      ></textarea>
+      <span class="sf-char-count"><span id="sf-chars-left">200</span> characters left</span>
+    </div>
+
+    <div id="sf-panel-draw" class="sf-panel" role="tabpanel" hidden>
+      <div class="sf-canvas-wrap">
+        <canvas id="sf-draw-canvas" width="460" height="200" aria-label="Drawing canvas"></canvas>
+      </div>
+      <div class="sf-draw-tools">
+        <button class="sf-tool-btn is-active" id="sf-tool-pen"   aria-pressed="true">✏️ Pen</button>
+        <button class="sf-tool-btn"           id="sf-tool-erase" aria-pressed="false">⬜ Erase</button>
+        <button class="sf-tool-btn"           id="sf-draw-clear">🗑 Clear</button>
+      </div>
+    </div>
+
+    <button class="sf-btn-submit" id="sf-submit-note">Post my note</button>
+    <p class="sf-disclaimer">Your note will appear on the board. Be kind — everyone can see it.</p>
+  </div>
+</div>
+
+<script src="{{ 'sf-hotline.js' | asset_url }}" defer></script>
