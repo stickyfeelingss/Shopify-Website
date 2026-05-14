@@ -1,0 +1,145 @@
+{% comment %} Sticky Circle — waitlist page {% endcomment %}
+{{ 'sf-sticky-circle.css' | asset_url | stylesheet_tag }}
+
+<div class="sc-page">
+
+  <div class="sc-hero">
+    <div class="sc-badge">Members Only</div>
+    <h1 class="sc-title">The Sticky Circle</h1>
+    <p class="sc-tagline">A private little world for people who feel things deeply.</p>
+    <div class="sc-perks">
+      <span class="sc-perk">✉️ Mail club</span>
+      <span class="sc-perk">🎁 Pre-launch freebies</span>
+      <span class="sc-perk">🌀 Events &amp; workshops</span>
+      <span class="sc-perk">🔒 Members-only access</span>
+    </div>
+  </div>
+
+  <div class="sc-form-wrap">
+    <div class="sc-form-card" id="sc-form-card">
+      <h2 class="sc-form-heading">Join the waitlist</h2>
+      <p class="sc-form-sub">We're not open yet — but when we are, you'll be first to know.</p>
+
+      {%- form 'contact', id: 'sc-waitlist-form', class: 'sc-form' -%}
+        {{ form.errors | default_errors }}
+
+        {%- if form.posted_successfully? -%}
+          <div class="sc-success" role="alert">
+            <span class="sc-success-icon">🌟</span>
+            <h3>You're on the list!</h3>
+            <p>We'll be in touch before anyone else when the Sticky Circle opens. Watch your inbox.</p>
+          </div>
+        {%- else -%}
+
+          <div class="sc-field-row">
+            <div class="sc-field">
+              <label for="sc-first-name">First name <span aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="sc-first-name"
+                name="contact[first_name]"
+                placeholder="Your first name"
+                required
+                autocomplete="given-name"
+              >
+            </div>
+            <div class="sc-field">
+              <label for="sc-last-name">Last name</label>
+              <input
+                type="text"
+                id="sc-last-name"
+                name="contact[last_name]"
+                placeholder="Your last name"
+                autocomplete="family-name"
+              >
+            </div>
+          </div>
+
+          <div class="sc-field">
+            <label for="sc-email">Email address <span aria-hidden="true">*</span></label>
+            <input
+              type="email"
+              id="sc-email"
+              name="contact[email]"
+              placeholder="hello@you.com"
+              required
+              autocomplete="email"
+            >
+          </div>
+
+          <div class="sc-field">
+            <label>What are you most excited about?</label>
+            <div class="sc-checkboxes" role="group" aria-label="Interests">
+              <label class="sc-checkbox-label">
+                <input type="checkbox" name="contact[interests_mail_club]" value="Mail club">
+                <span class="sc-checkbox-custom"></span>
+                ✉️ Mail club
+              </label>
+              <label class="sc-checkbox-label">
+                <input type="checkbox" name="contact[interests_events]" value="Events &amp; workshops">
+                <span class="sc-checkbox-custom"></span>
+                🌀 Events &amp; workshops
+              </label>
+              <label class="sc-checkbox-label">
+                <input type="checkbox" name="contact[interests_freebies]" value="Pre-launch freebies">
+                <span class="sc-checkbox-custom"></span>
+                🎁 Pre-launch freebies
+              </label>
+              <label class="sc-checkbox-label">
+                <input type="checkbox" name="contact[interests_access]" value="Members-only access">
+                <span class="sc-checkbox-custom"></span>
+                🔒 Members-only access
+              </label>
+            </div>
+          </div>
+
+          <div class="sc-field">
+            <label for="sc-message">Anything you want to say? <span class="sc-optional">(optional)</span></label>
+            <textarea
+              id="sc-message"
+              name="contact[body]"
+              placeholder="What's been on your mind lately…"
+              rows="3"
+              maxlength="500"
+            ></textarea>
+          </div>
+
+          <input type="hidden" name="contact[tags]" value="sticky-circle-waitlist">
+          <input type="hidden" name="contact[source]" value="Sticky Circle waitlist page">
+
+          <button type="submit" class="sc-submit-btn">
+            <span>Count me in</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <p class="sc-privacy">No spam, ever. Just the good stuff, when we're ready.</p>
+
+        {%- endif -%}
+      {%- endform -%}
+    </div>
+
+    <div class="sc-side-info">
+      <div class="sc-info-block">
+        <h3>What is the Sticky Circle?</h3>
+        <p>A close-knit, invite-first community built around emotional honesty, creative expression, and feeling a little less alone. Think of it as the inner circle of Sticky Feelings — a space for people who get it.</p>
+      </div>
+      <div class="sc-info-block">
+        <h3>What do members get?</h3>
+        <ul class="sc-benefit-list">
+          <li>✉️ A physical mail club — letters, cards &amp; surprises in your actual post</li>
+          <li>🎁 First access to new products before anyone else</li>
+          <li>🌀 Invites to events, workshops &amp; intimate gatherings</li>
+          <li>🔒 A private space to connect with other members</li>
+        </ul>
+      </div>
+      <div class="sc-info-block sc-info-block--quote">
+        <blockquote>"For people who feel things deeply, and aren't afraid to say so."</blockquote>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="{{ 'sf-sticky-circle.js' | asset_url }}" defer></script>
