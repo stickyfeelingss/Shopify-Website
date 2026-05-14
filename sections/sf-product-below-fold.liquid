@@ -1,482 +1,22 @@
 {% stylesheet %}
-  /* ==============================================
-     SF Product Page — Custom Styles
-     ============================================== */
-
-  /* --- Product info overrides (above fold) --- */
-
-  .sf-badge-limited {
-    display: inline-flex;
-    align-items: center;
-    background: #b8d657;
-    color: #563433;
-    border-radius: 23px;
-    padding: 5px 18px;
-    font-size: 13px;
-    font-weight: 600;
-    font-family: 'Instrument Sans', sans-serif;
-    letter-spacing: 2.1px;
-    text-transform: uppercase;
-    line-height: 1.6;
-  }
-
-  .sf-stars-row {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .sf-stars-row svg {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .sf-rating-label {
-    font-family: 'Instrument Sans', sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin-left: 4px;
-  }
-
-  .sf-rating-label span {
-    color: rgba(0,0,0,0.6);
-  }
-
-  /* Override theme Add to Cart button to match Figma red */
-  .product-information .button--primary,
-  .product-information .add-to-cart-button.button {
-    background-color: #e84b42 !important;
-    border-color: #e84b42 !important;
-    border-radius: 62px !important;
-  }
-
-  .product-information .button--primary:hover,
-  .product-information .add-to-cart-button.button:hover {
-    background-color: #c73d35 !important;
-    border-color: #c73d35 !important;
-  }
-
-  /* Quantity selector pill */
-  .product-information quantity-selector {
-    border-radius: 62px;
-    overflow: hidden;
-  }
-
-  /* ==============================================
-     Trust Badges
-     ============================================== */
-  .sf-trust-badges {
-    display: flex;
-    justify-content: center;
-    padding: 32px 120px;
-    border-top: 1px solid rgba(0,0,0,0.08);
-    gap: 0;
-  }
-
-  .sf-trust-badge {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    text-align: center;
-    flex: 1;
-    max-width: 220px;
-  }
-
-  .sf-trust-badge__icon {
-    width: 44px;
-    height: 44px;
-    flex-shrink: 0;
-  }
-
-  .sf-trust-badge__text {
-    font-family: 'Instrument Sans', sans-serif;
-    font-size: 15px;
-    color: #000;
-    line-height: 1.4;
-  }
-
-  /* ==============================================
-     Marquee strip
-     ============================================== */
-  .sf-marquee-strip {
-    overflow: hidden;
-    background: #563433;
-    padding: 13px 0;
-  }
-
-  .sf-marquee-track {
-    display: flex;
-    width: max-content;
-    animation: sf-scroll 28s linear infinite;
-  }
-
-  .sf-marquee-track:hover {
-    animation-play-state: paused;
-  }
-
-  .sf-marquee-group {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-  }
-
-  .sf-marquee-item {
-    font-family: 'Instrument Sans', sans-serif;
-    font-size: 13px;
-    color: #fff;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    padding: 0 18px;
-    white-space: nowrap;
-  }
-
-  .sf-marquee-sep {
-    color: #f5d76e;
-    font-size: 14px;
-    flex-shrink: 0;
-  }
-
-  @keyframes sf-scroll {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-
-  /* ==============================================
-     Lifestyle images grid
-     ============================================== */
-  .sf-lifestyle-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .sf-lifestyle-cell {
-    position: relative;
-    overflow: hidden;
-    min-height: 640px;
-  }
-
-  .sf-lifestyle-cell img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .sf-lifestyle-cell__placeholder {
-    width: 100%;
-    min-height: 640px;
-    background: #2a2a2a;
-  }
-
-  .sf-lifestyle-cell__caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 40px 28px;
-    background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%);
-    color: #fff;
-    font-family: 'Instrument Sans', sans-serif;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 1.45;
-    letter-spacing: -0.1px;
-    text-align: center;
-  }
-
-  /* ==============================================
-     Shared section heading
-     ============================================== */
-  .sf-section-eyebrow {
-    font-family: 'Arial Narrow', 'Impact', sans-serif;
-    font-size: 13px;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    color: #000;
-    margin: 0 0 6px;
-    line-height: 1;
-  }
-
-  .sf-section-title {
-    font-family: 'Georgia', serif;
-    font-size: 28px;
-    font-weight: 400;
-    font-style: italic;
-    color: #000;
-    margin: 0;
-    line-height: 1.1;
-  }
-
-  /* ==============================================
-     Who is it for
-     ============================================== */
-  .sf-characters-section {
-    padding: 72px 85px 80px;
-    background: #fff;
-  }
-
-  .sf-characters-header {
-    margin-bottom: 56px;
-  }
-
-  .sf-characters-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
-  }
-
-  .sf-character-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 16px;
-  }
-
-  .sf-character-card__img-wrap {
-    width: 140px;
-    height: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .sf-character-card__img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .sf-character-card__placeholder {
-    width: 140px;
-    height: 140px;
-    background: #f0f0f0;
-    border-radius: 50%;
-  }
-
-  .sf-character-card__name {
-    font-family: 'Georgia', serif;
-    font-size: 20px;
-    font-weight: 400;
-    font-style: italic;
-    color: #000;
-    margin: 0;
-  }
-
-  .sf-character-card__desc {
-    font-family: 'Instrument Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    color: #000;
-    line-height: 1.55;
-    margin: 0;
-  }
-
-  /* ==============================================
-     Testimonials
-     ============================================== */
-  .sf-testimonials-section {
-    padding: 72px 85px 80px;
-    background: #fff;
-  }
-
-  .sf-testimonials-header {
-    margin-bottom: 56px;
-  }
-
-  .sf-testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-  }
-
-  .sf-review-card {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .sf-review-stars {
-    display: flex;
-    gap: 3px;
-  }
-
-  .sf-review-stars svg {
-    width: 22px;
-    height: 22px;
-  }
-
-  .sf-review-title {
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    color: #563433;
-    line-height: 1.3;
-    margin: 0;
-  }
-
-  .sf-review-body {
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #563433;
-    line-height: 1.65;
-    margin: 0;
-  }
-
-  .sf-review-author {
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    color: #563433;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 8px;
-  }
-
-  .sf-add-review {
-    display: flex;
-    justify-content: center;
-    margin-top: 48px;
-  }
-
-  .sf-add-review__btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: #e84b42;
-    color: #fff;
-    font-family: 'Instrument Sans', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 14px 54px;
-    border-radius: 62px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .sf-add-review__btn:hover {
-    background: #c73d35;
-    color: #fff;
-  }
-
-  /* ==============================================
-     How to use
-     ============================================== */
-  .sf-howto-section {
-    padding: 72px 85px 80px;
-    background: #fff;
-  }
-
-  .sf-howto-header {
-    margin-bottom: 56px;
-  }
-
-  .sf-howto-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-  }
-
-  .sf-howto-item {
-    font-family: 'Instrument Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: #000;
-    line-height: 1.65;
-  }
-
-  /* ==============================================
-     Responsive
-     ============================================== */
-  @media screen and (max-width: 989px) {
-    .sf-trust-badges {
-      padding: 28px 40px;
-    }
-
-    .sf-lifestyle-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .sf-lifestyle-cell {
-      min-height: 380px;
-    }
-
-    .sf-lifestyle-cell__placeholder {
-      min-height: 380px;
-    }
-
-    .sf-characters-section {
-      padding: 48px 24px;
-    }
-
-    .sf-characters-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-    }
-
-    .sf-testimonials-section {
-      padding: 48px 24px;
-    }
-
-    .sf-testimonials-grid {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-
-    .sf-howto-section {
-      padding: 48px 24px;
-    }
-
-    .sf-howto-grid {
-      grid-template-columns: 1fr;
-      gap: 28px;
-    }
-  }
-
-  @media screen and (max-width: 599px) {
-    .sf-trust-badges {
-      padding: 28px 20px;
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .sf-characters-grid {
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    .sf-section-title {
-      font-size: 22px;
-    }
-
-    .sf-lifestyle-cell__caption {
-      font-size: 18px;
-    }
-  }
+.sf-badge-limited{display:inline-flex;align-items:center;background:#b8d657;color:#563433;border-radius:23px;padding:5px 18px;font-size:13px;font-weight:600;font-family:'Instrument Sans',sans-serif;letter-spacing:2.1px;text-transform:uppercase;line-height:1.6}.sf-stars-row{display:flex;align-items:center;gap:6px}.sf-stars-row svg{display:inline-block;vertical-align:middle}.sf-rating-label{font-family:'Instrument Sans',sans-serif;font-size:14px;color:#000;margin-left:4px}.sf-rating-label span{color:rgba(0,0,0,0.6)}.product-information .button--primary,.product-information .add-to-cart-button.button{background-color:#e84b42 !important;border-color:#e84b42 !important;border-radius:62px !important}.product-information .button--primary:hover,.product-information .add-to-cart-button.button:hover{background-color:#c73d35 !important;border-color:#c73d35 !important}.product-information quantity-selector{border-radius:62px;overflow:hidden}.sf-trust-badges{display:flex;justify-content:center;padding:32px 120px;border-top:1px solid rgba(0,0,0,0.08);gap:0}.sf-trust-badge{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;flex:1;max-width:220px}.sf-trust-badge__icon{width:44px;height:44px;flex-shrink:0}.sf-trust-badge__text{font-family:'Instrument Sans',sans-serif;font-size:15px;color:#000;line-height:1.4}.sf-marquee-strip{overflow:hidden;background:#563433;padding:13px 0}.sf-marquee-track{display:flex;width:max-content;animation:sf-scroll 28s linear infinite}.sf-marquee-track:hover{animation-play-state:paused}.sf-marquee-group{display:flex;align-items:center;flex-shrink:0}.sf-marquee-item{font-family:'Instrument Sans',sans-serif;font-size:13px;color:#fff;letter-spacing:2.5px;text-transform:uppercase;padding:0 18px;white-space:nowrap}.sf-marquee-sep{color:#f5d76e;font-size:14px;flex-shrink:0}@keyframes sf-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}.sf-lifestyle-grid{display:grid;grid-template-columns:repeat(3,1fr)}.sf-lifestyle-cell{position:relative;overflow:hidden;min-height:640px}.sf-lifestyle-cell img{width:100%;height:100%;object-fit:cover;display:block}.sf-lifestyle-cell__placeholder{width:100%;min-height:640px;background:#2a2a2a}.sf-lifestyle-cell__caption{position:absolute;bottom:0;left:0;right:0;padding:40px 28px;background:linear-gradient(to top,rgba(0,0,0,0.55) 0%,transparent 100%);color:#fff;font-family:'Instrument Sans',sans-serif;font-size:22px;font-weight:500;line-height:1.45;letter-spacing:-0.1px;text-align:center}.sf-section-eyebrow{font-family:'Arial Narrow','Impact',sans-serif;font-size:13px;letter-spacing:1.8px;text-transform:uppercase;color:#000;margin:0 0 6px;line-height:1}.sf-section-title{font-family:'Georgia',serif;font-size:28px;font-weight:400;font-style:italic;color:#000;margin:0;line-height:1.1}.sf-characters-section{padding:72px 85px 80px;background:#fff}.sf-characters-header{margin-bottom:56px}.sf-characters-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}.sf-character-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px}.sf-character-card__img-wrap{width:140px;height:140px;display:flex;align-items:center;justify-content:center}.sf-character-card__img-wrap img{width:100%;height:100%;object-fit:contain}.sf-character-card__placeholder{width:140px;height:140px;background:#f0f0f0;border-radius:50%}.sf-character-card__name{font-family:'Georgia',serif;font-size:20px;font-weight:400;font-style:italic;color:#000;margin:0}.sf-character-card__desc{font-family:'Instrument Sans',sans-serif;font-size:15px;font-weight:400;color:#000;line-height:1.55;margin:0}.sf-testimonials-section{padding:72px 85px 80px;background:#fff}.sf-testimonials-header{margin-bottom:56px}.sf-testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}.sf-review-card{display:flex;flex-direction:column;gap:12px}.sf-review-stars{display:flex;gap:3px}.sf-review-stars svg{width:22px;height:22px}.sf-review-title{font-family:'Instrument Sans',sans-serif;font-weight:700;font-size:22px;color:#563433;line-height:1.3;margin:0}.sf-review-body{font-family:'Instrument Sans',sans-serif;font-weight:500;font-size:16px;color:#563433;line-height:1.65;margin:0}.sf-review-author{font-family:'Instrument Sans',sans-serif;font-weight:700;font-size:13px;color:#563433;text-transform:uppercase;letter-spacing:1px;margin-top:8px}.sf-add-review{display:flex;justify-content:center;margin-top:48px}.sf-add-review__btn{display:inline-flex;align-items:center;justify-content:center;background:#e84b42;color:#fff;font-family:'Instrument Sans',sans-serif;font-weight:500;font-size:16px;padding:14px 54px;border-radius:62px;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s}.sf-add-review__btn:hover{background:#c73d35;color:#fff}.sf-howto-section{padding:72px 85px 80px;background:#fff}.sf-howto-header{margin-bottom:56px}.sf-howto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}.sf-howto-item{font-family:'Instrument Sans',sans-serif;font-size:18px;font-weight:400;color:#000;line-height:1.65}@media screen and (max-width:989px){.sf-trust-badges{padding:28px 40px}.sf-lifestyle-grid{grid-template-columns:1fr}.sf-lifestyle-cell{min-height:380px}.sf-lifestyle-cell__placeholder{min-height:380px}.sf-characters-section{padding:48px 24px}.sf-characters-grid{grid-template-columns:repeat(2,1fr);gap:32px}.sf-testimonials-section{padding:48px 24px}.sf-testimonials-grid{grid-template-columns:1fr;gap:40px}.sf-howto-section{padding:48px 24px}.sf-howto-grid{grid-template-columns:1fr;gap:28px}}@media screen and (max-width:599px){.sf-trust-badges{padding:28px 20px;flex-direction:column;align-items:center;gap:24px}.sf-characters-grid{grid-template-columns:1fr 1fr;gap:24px}.sf-section-title{font-size:22px}.sf-lifestyle-cell__caption{font-size:18px}}
 {% endstylesheet %}
 
-<!-- ============================================
-     Trust Badges
-     ============================================ -->
+
 <div class="sf-trust-badges">
   <div class="sf-trust-badge">
     <svg class="sf-trust-badge__icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M6 14l16-6 16 6v10c0 8-7 13-16 16C13 37 6 32 6 24V14z" stroke="#563433" stroke-width="1.5" stroke-linejoin="round"/>
       <path d="M15 22l5 5 9-9" stroke="#563433" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-    <div class="sf-trust-badge__text">{{ section.settings.badge1_text | default: 'Perfect for Gifting' }}</div>
+    <div class="sf-trust-badge__text">{{ section.settings.badge1_text }}</div>
   </div>
   <div class="sf-trust-badge">
     <svg class="sf-trust-badge__icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M22 8c7.7 0 14 6.3 14 14 0 5.5-3.2 10.3-7.8 12.7L22 38l-6.2-3.3C11.2 32.3 8 27.5 8 22c0-7.7 6.3-14 14-14z" stroke="#563433" stroke-width="1.5" stroke-linejoin="round"/>
       <path d="M17 22l3 3 7-7" stroke="#563433" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-    <div class="sf-trust-badge__text">{{ section.settings.badge2_text | default: 'Made with love in India' }}</div>
+    <div class="sf-trust-badge__text">{{ section.settings.badge2_text }}</div>
   </div>
   <div class="sf-trust-badge">
     <svg class="sf-trust-badge__icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -485,15 +25,12 @@
       <path d="M7 24h30" stroke="#563433" stroke-width="1.5"/>
       <path d="M22 24v9" stroke="#563433" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
-    <div class="sf-trust-badge__text">{{ section.settings.badge3_text | default: 'Away from the screen' }}</div>
+    <div class="sf-trust-badge__text">{{ section.settings.badge3_text }}</div>
   </div>
 </div>
 
-<!-- ============================================
-     Marquee Strip
-     ============================================ -->
 <div class="sf-marquee-strip" aria-hidden="true">
-  {%- assign marquee_text = section.settings.marquee_text | default: 'STICKY FEELINGS' -%}
+  {%- assign marquee_text = section.settings.marquee_text -%}
   <div class="sf-marquee-track">
     <div class="sf-marquee-group">
       {%- for i in (1..10) -%}
@@ -508,22 +45,19 @@
   </div>
 </div>
 
-<!-- ============================================
-     Lifestyle Images
-     ============================================ -->
 <div class="sf-lifestyle-grid">
   {%- for i in (1..3) -%}
     {%- liquid
       case i
         when 1
           assign ls_img = section.settings.lifestyle_img_1
-          assign ls_cap = section.settings.lifestyle_cap_1 | default: 'turn small conversations into something that stays'
+          assign ls_cap = section.settings.lifestyle_cap_1
         when 2
           assign ls_img = section.settings.lifestyle_img_2
-          assign ls_cap = section.settings.lifestyle_cap_2 | default: 'like meeting your thoughts without rushing past them'
+          assign ls_cap = section.settings.lifestyle_cap_2
         when 3
           assign ls_img = section.settings.lifestyle_img_3
-          assign ls_cap = section.settings.lifestyle_cap_3 | default: 'because even familiar people have unexplored corners'
+          assign ls_cap = section.settings.lifestyle_cap_3
       endcase
     -%}
     <div class="sf-lifestyle-cell">
@@ -539,9 +73,6 @@
   {%- endfor -%}
 </div>
 
-<!-- ============================================
-     Who Is It For
-     ============================================ -->
 <div class="sf-characters-section">
   <div class="sf-characters-header">
     <p class="sf-section-eyebrow">Who is it for?</p>
@@ -553,20 +84,20 @@
         case i
           when 1
             assign c_img  = section.settings.char1_img
-            assign c_name = section.settings.char1_name | default: 'The Ideal Friend'
-            assign c_desc = section.settings.char1_desc | default: '"I hold everyone else\'s feelings, not mine." First one people call, last one to ask for help. Processes emotions through taking care of others. Needs space that\'s just for them'
+            assign c_name = section.settings.char1_name
+            assign c_desc = section.settings.char1_descs feelings, not mine." First one people call, last one to ask for help. Processes emotions through taking care of others. Needs space that\'s just for them'
           when 2
             assign c_img  = section.settings.char2_img
-            assign c_name = section.settings.char2_name | default: 'The Overthinker'
-            assign c_desc = section.settings.char2_desc | default: '"I\'ve thought about it 47 times already." Makes pros/cons lists for feelings. Has the conversation in their head before it happens. Needs permission to just feel without fixing'
+            assign c_name = section.settings.char2_name
+            assign c_desc = section.settings.char2_descve thought about it 47 times already." Makes pros/cons lists for feelings. Has the conversation in their head before it happens. Needs permission to just feel without fixing'
           when 3
             assign c_img  = section.settings.char3_img
-            assign c_name = section.settings.char3_name | default: 'The Locked Vault'
-            assign c_desc = section.settings.char3_desc | default: '"I\'m fine. Really. I\'m FINE." Knows something is wrong but can\'t name it. Was never taught that feelings were safe. Needs a gentle door, not a crowbar'
+            assign c_name = section.settings.char3_name
+            assign c_desc = section.settings.char3_descm fine. Really. I\'m FINE." Knows something is wrong but can\'t name it. Was never taught that feelings were safe. Needs a gentle door, not a crowbar'
           when 4
             assign c_img  = section.settings.char4_img
-            assign c_name = section.settings.char4_name | default: 'The Grower'
-            assign c_desc = section.settings.char4_desc | default: '"I\'m in a season of change and it\'s a lot." Actively working on themselves. Therapy is going well but needs to practice. Wants tools, not more content to consume'
+            assign c_name = section.settings.char4_name
+            assign c_desc = section.settings.char4_descm in a season of change and it\'s a lot." Actively working on themselves. Therapy is going well but needs to practice. Wants tools, not more content to consume'
         endcase
       -%}
       <div class="sf-character-card">
@@ -584,9 +115,6 @@
   </div>
 </div>
 
-<!-- ============================================
-     Testimonials
-     ============================================ -->
 <div class="sf-testimonials-section">
   <div class="sf-testimonials-header">
     <p class="sf-section-eyebrow">Hear it from them</p>
@@ -597,20 +125,20 @@
       {%- liquid
         case i
           when 1
-            assign r_title  = section.settings.rev1_title  | default: 'Cried on a Tuesday afternoon and it felt good'
-            assign r_body   = section.settings.rev1_body   | default: "I picked an Inside Scoop card on a random weekday and ended up writing for 20 minutes straight. Nothing dramatic — just stuff I'd been quietly carrying. Didn't expect a little card to do that."
-            assign r_author = section.settings.rev1_author | default: 'MEERA R.'
-            assign r_rating = section.settings.rev1_rating | default: 5
+            assign r_title  = section.settings.rev1_title
+            assign r_body   = section.settings.rev1_body
+            assign r_author = section.settings.rev1_author
+            assign r_rating = section.settings.rev1_rating
           when 2
-            assign r_title  = section.settings.rev2_title  | default: 'Cried on a Tuesday afternoon and it felt good'
-            assign r_body   = section.settings.rev2_body   | default: "I picked an Inside Scoop card on a random weekday and ended up writing for 20 minutes straight. Nothing dramatic — just stuff I'd been quietly carrying. Didn't expect a little card to do that."
-            assign r_author = section.settings.rev2_author | default: 'MEERA R.'
-            assign r_rating = section.settings.rev2_rating | default: 5
+            assign r_title  = section.settings.rev2_title
+            assign r_body   = section.settings.rev2_body
+            assign r_author = section.settings.rev2_author
+            assign r_rating = section.settings.rev2_rating
           when 3
-            assign r_title  = section.settings.rev3_title  | default: 'Cried on a Tuesday afternoon and it felt good'
-            assign r_body   = section.settings.rev3_body   | default: "I picked an Inside Scoop card on a random weekday and ended up writing for 20 minutes straight. Nothing dramatic — just stuff I'd been quietly carrying. Didn't expect a little card to do that."
-            assign r_author = section.settings.rev3_author | default: 'MEERA R.'
-            assign r_rating = section.settings.rev3_rating | default: 5
+            assign r_title  = section.settings.rev3_title
+            assign r_body   = section.settings.rev3_body
+            assign r_author = section.settings.rev3_author
+            assign r_rating = section.settings.rev3_rating
         endcase
       -%}
       <div class="sf-review-card">
@@ -634,279 +162,18 @@
   </div>
 </div>
 
-<!-- ============================================
-     How To Use / From the Founder
-     ============================================ -->
 <div class="sf-howto-section">
   <div class="sf-howto-header">
     <p class="sf-section-eyebrow">How to use it</p>
     <h2 class="sf-section-title">From the founder</h2>
   </div>
   <div class="sf-howto-grid">
-    <div class="sf-howto-item">{{ section.settings.howto_1 | default: 'Use it with a partner, a close friend, or a sibling. Sip & Reflect cards have started some of the deepest conversations our users have had in years.' }}</div>
-    <div class="sf-howto-item">{{ section.settings.howto_2 | default: 'Keep it on your nightstand. Reach for it before your phone. The Energy Bites deck is perfect for a micro mood-check before the day begins.' }}</div>
-    <div class="sf-howto-item">{{ section.settings.howto_3 | default: "When you know something is off but can't name it. The Inside Scoop cards are designed for exactly these moments — a gentle mirror for hard days." }}</div>
+    <div class="sf-howto-item">{{ section.settings.howto_1 }}</div>
+    <div class="sf-howto-item">{{ section.settings.howto_2 }}</div>
+    <div class="sf-howto-item">{{ section.settings.howto_3 }}</div>
   </div>
 </div>
 
 {% schema %}
-{
-  "name": "SF Product — Extra Content",
-  "tag": "div",
-  "settings": [
-    {
-      "type": "header",
-      "content": "Trust Badges"
-    },
-    {
-      "type": "text",
-      "id": "badge1_text",
-      "label": "Badge 1 text",
-      "default": "Perfect for Gifting"
-    },
-    {
-      "type": "text",
-      "id": "badge2_text",
-      "label": "Badge 2 text",
-      "default": "Made with love in India"
-    },
-    {
-      "type": "text",
-      "id": "badge3_text",
-      "label": "Badge 3 text",
-      "default": "Away from the screen"
-    },
-    {
-      "type": "header",
-      "content": "Marquee Strip"
-    },
-    {
-      "type": "text",
-      "id": "marquee_text",
-      "label": "Marquee text",
-      "default": "STICKY FEELINGS"
-    },
-    {
-      "type": "header",
-      "content": "Lifestyle Images"
-    },
-    {
-      "type": "image_picker",
-      "id": "lifestyle_img_1",
-      "label": "Lifestyle image 1"
-    },
-    {
-      "type": "text",
-      "id": "lifestyle_cap_1",
-      "label": "Caption 1",
-      "default": "turn small conversations into something that stays"
-    },
-    {
-      "type": "image_picker",
-      "id": "lifestyle_img_2",
-      "label": "Lifestyle image 2"
-    },
-    {
-      "type": "text",
-      "id": "lifestyle_cap_2",
-      "label": "Caption 2",
-      "default": "like meeting your thoughts without rushing past them"
-    },
-    {
-      "type": "image_picker",
-      "id": "lifestyle_img_3",
-      "label": "Lifestyle image 3"
-    },
-    {
-      "type": "text",
-      "id": "lifestyle_cap_3",
-      "label": "Caption 3",
-      "default": "because even familiar people have unexplored corners"
-    },
-    {
-      "type": "header",
-      "content": "Who Is It For"
-    },
-    {
-      "type": "image_picker",
-      "id": "char1_img",
-      "label": "Character 1 image"
-    },
-    {
-      "type": "text",
-      "id": "char1_name",
-      "label": "Character 1 name",
-      "default": "The Ideal Friend"
-    },
-    {
-      "type": "textarea",
-      "id": "char1_desc",
-      "label": "Character 1 description",
-      "default": "\"I hold everyone else's feelings, not mine.\" First one people call, last one to ask for help. Processes emotions through taking care of others. Needs space that's just for them"
-    },
-    {
-      "type": "image_picker",
-      "id": "char2_img",
-      "label": "Character 2 image"
-    },
-    {
-      "type": "text",
-      "id": "char2_name",
-      "label": "Character 2 name",
-      "default": "The Overthinker"
-    },
-    {
-      "type": "textarea",
-      "id": "char2_desc",
-      "label": "Character 2 description",
-      "default": "\"I've thought about it 47 times already.\" Makes pros/cons lists for feelings. Has the conversation in their head before it happens. Needs permission to just feel without fixing"
-    },
-    {
-      "type": "image_picker",
-      "id": "char3_img",
-      "label": "Character 3 image"
-    },
-    {
-      "type": "text",
-      "id": "char3_name",
-      "label": "Character 3 name",
-      "default": "The Locked Vault"
-    },
-    {
-      "type": "textarea",
-      "id": "char3_desc",
-      "label": "Character 3 description",
-      "default": "\"I'm fine. Really. I'm FINE.\" Knows something is wrong but can't name it. Was never taught that feelings were safe. Needs a gentle door, not a crowbar"
-    },
-    {
-      "type": "image_picker",
-      "id": "char4_img",
-      "label": "Character 4 image"
-    },
-    {
-      "type": "text",
-      "id": "char4_name",
-      "label": "Character 4 name",
-      "default": "The Grower"
-    },
-    {
-      "type": "textarea",
-      "id": "char4_desc",
-      "label": "Character 4 description",
-      "default": "\"I'm in a season of change and it's a lot.\" Actively working on themselves. Therapy is going well but needs to practice. Wants tools, not more content to consume"
-    },
-    {
-      "type": "header",
-      "content": "Testimonials"
-    },
-    {
-      "type": "text",
-      "id": "rev1_title",
-      "label": "Review 1 title",
-      "default": "Cried on a Tuesday afternoon and it felt good"
-    },
-    {
-      "type": "textarea",
-      "id": "rev1_body",
-      "label": "Review 1 body",
-      "default": "I picked an Inside Scoop card on a random weekday and ended up writing for 20 minutes straight. Nothing dramatic — just stuff I'd been quietly carrying. Didn't expect a little card to do that."
-    },
-    {
-      "type": "text",
-      "id": "rev1_author",
-      "label": "Review 1 author",
-      "default": "MEERA R."
-    },
-    {
-      "type": "range",
-      "id": "rev1_rating",
-      "label": "Review 1 rating",
-      "min": 1,
-      "max": 5,
-      "step": 1,
-      "default": 5
-    },
-    {
-      "type": "text",
-      "id": "rev2_title",
-      "label": "Review 2 title",
-      "default": "Cried on a Tuesday afternoon and it felt good"
-    },
-    {
-      "type": "textarea",
-      "id": "rev2_body",
-      "label": "Review 2 body",
-      "default": "I picked an Inside Scoop card on a random weekday and ended up writing for 20 minutes straight. Nothing dramatic — just stuff I'd been quietly carrying. Didn't expect a little card to do that."
-    },
-    {
-      "type": "text",
-      "id": "rev2_author",
-      "label": "Review 2 author",
-      "default": "MEERA R."
-    },
-    {
-      "type": "range",
-      "id": "rev2_rating",
-      "label": "Review 2 rating",
-      "min": 1,
-      "max": 5,
-      "step": 1,
-      "default": 5
-    },
-    {
-      "type": "text",
-      "id": "rev3_title",
-      "label": "Review 3 title",
-      "default": "Cried on a Tuesday afternoon and it felt good"
-    },
-    {
-      "type": "textarea",
-      "id": "rev3_body",
-      "label": "Review 3 body",
-      "default": "I picked an Inside Scoop card on a random weekday and ended up writing for 20 minutes straight. Nothing dramatic — just stuff I'd been quietly carrying. Didn't expect a little card to do that."
-    },
-    {
-      "type": "text",
-      "id": "rev3_author",
-      "label": "Review 3 author",
-      "default": "MEERA R."
-    },
-    {
-      "type": "range",
-      "id": "rev3_rating",
-      "label": "Review 3 rating",
-      "min": 1,
-      "max": 5,
-      "step": 1,
-      "default": 5
-    },
-    {
-      "type": "header",
-      "content": "How To Use It"
-    },
-    {
-      "type": "textarea",
-      "id": "howto_1",
-      "label": "How to use — column 1",
-      "default": "Use it with a partner, a close friend, or a sibling. Sip & Reflect cards have started some of the deepest conversations our users have had in years."
-    },
-    {
-      "type": "textarea",
-      "id": "howto_2",
-      "label": "How to use — column 2",
-      "default": "Keep it on your nightstand. Reach for it before your phone. The Energy Bites deck is perfect for a micro mood-check before the day begins."
-    },
-    {
-      "type": "textarea",
-      "id": "howto_3",
-      "label": "How to use — column 3",
-      "default": "When you know something is off but can't name it. The Inside Scoop cards are designed for exactly these moments — a gentle mirror for hard days."
-    }
-  ],
-  "presets": [
-    {
-      "name": "SF Product — Extra Content"
-    }
-  ]
-}
+{"name":"SF Extra Content","tag":"div","settings":[{"type":"header","content":"Trust Badges"},{"type":"text","id":"badge1_text","label":"Badge 1 text"},{"type":"text","id":"badge2_text","label":"Badge 2 text"},{"type":"text","id":"badge3_text","label":"Badge 3 text"},{"type":"header","content":"Marquee Strip"},{"type":"text","id":"marquee_text","label":"Marquee text"},{"type":"header","content":"Lifestyle Images"},{"type":"image_picker","id":"lifestyle_img_1","label":"Lifestyle image 1"},{"type":"text","id":"lifestyle_cap_1","label":"Caption 1"},{"type":"image_picker","id":"lifestyle_img_2","label":"Lifestyle image 2"},{"type":"text","id":"lifestyle_cap_2","label":"Caption 2"},{"type":"image_picker","id":"lifestyle_img_3","label":"Lifestyle image 3"},{"type":"text","id":"lifestyle_cap_3","label":"Caption 3"},{"type":"header","content":"Who Is It For"},{"type":"image_picker","id":"char1_img","label":"Character 1 image"},{"type":"text","id":"char1_name","label":"Character 1 name"},{"type":"textarea","id":"char1_desc","label":"Character 1 description"},{"type":"image_picker","id":"char2_img","label":"Character 2 image"},{"type":"text","id":"char2_name","label":"Character 2 name"},{"type":"textarea","id":"char2_desc","label":"Character 2 description"},{"type":"image_picker","id":"char3_img","label":"Character 3 image"},{"type":"text","id":"char3_name","label":"Character 3 name"},{"type":"textarea","id":"char3_desc","label":"Character 3 description"},{"type":"image_picker","id":"char4_img","label":"Character 4 image"},{"type":"text","id":"char4_name","label":"Character 4 name"},{"type":"textarea","id":"char4_desc","label":"Character 4 description"},{"type":"header","content":"Testimonials"},{"type":"text","id":"rev1_title","label":"Review 1 title"},{"type":"textarea","id":"rev1_body","label":"Review 1 body"},{"type":"text","id":"rev1_author","label":"Review 1 author"},{"type":"range","id":"rev1_rating","label":"Review 1 rating","min":1,"max":5,"step":1},{"type":"text","id":"rev2_title","label":"Review 2 title"},{"type":"textarea","id":"rev2_body","label":"Review 2 body"},{"type":"text","id":"rev2_author","label":"Review 2 author"},{"type":"range","id":"rev2_rating","label":"Review 2 rating","min":1,"max":5,"step":1},{"type":"text","id":"rev3_title","label":"Review 3 title"},{"type":"textarea","id":"rev3_body","label":"Review 3 body"},{"type":"text","id":"rev3_author","label":"Review 3 author"},{"type":"range","id":"rev3_rating","label":"Review 3 rating","min":1,"max":5,"step":1},{"type":"header","content":"How To Use It"},{"type":"textarea","id":"howto_1","label":"How to use \u2014 column 1"},{"type":"textarea","id":"howto_2","label":"How to use \u2014 column 2"},{"type":"textarea","id":"howto_3","label":"How to use \u2014 column 3"}],"presets":[{"name":"SF Extra Content"}]}
 {% endschema %}
