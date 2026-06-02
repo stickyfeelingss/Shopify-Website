@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "announcement": {
+      "type": "sf-announcement",
+      "settings": {}
+    },
+    "hero": {
+      "type": "sf-hero",
+      "settings": {}
+    },
+    "products": {
+      "type": "sf-products-grid",
+      "settings": {}
+    },
+    "conversation": {
+      "type": "sf-conversation",
+      "settings": {}
+    },
+    "cta": {
+      "type": "sf-cta-email",
+      "settings": {}
+    }
+  },
+  "order": ["announcement", "hero", "products", "conversation", "cta"]
+}
