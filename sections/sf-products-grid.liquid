@@ -20,17 +20,17 @@
           {%- if juicebox.featured_image -%}
             <img src="{{ juicebox.featured_image | image_url: width: 500 }}" alt="{{ juicebox.title }}" class="sfh-card__img" loading="lazy">
           {%- else -%}
-            <img src="https://www.figma.com/api/mcp/asset/9b25c288-6ada-4824-bc43-ac9f6b686d61" alt="Emotional Juice Box" class="sfh-card__img" loading="lazy">
+            <img src="https://www.figma.com/api/mcp/asset/e863f071-074e-4381-853d-4924187d713f" alt="Emotional Juice Box" class="sfh-card__img" loading="lazy">
           {%- endif -%}
         </div>
       </a>
       <div class="sfh-card__body">
         <div class="sfh-card__meta">
           <span class="sfh-card__name">{{ juicebox.title | default: 'Emotional Juice Box' }}</span>
-          <span class="sfh-card__detail">100 prompt cards</span>
+          <span class="sfh-card__detail">80 prompt cards</span>
         </div>
         <div class="sfh-card__meta">
-          <span class="sfh-card__price">from ₹{{ juicebox.price_min | divided_by: 100 | default: '349' }}</span>
+          <span class="sfh-card__price">from ₹{{ juicebox.price_min | divided_by: 100 | default: '499' }}</span>
           <span class="sfh-card__sub">For all your micro emotions and the things you let slide</span>
         </div>
         <a href="{{ juicebox.url | default: '/collections/the-emotional-juice-box' }}" class="sfh-card__explore">EXPLORE <span class="sfh-arrow">→</span></a>
@@ -45,7 +45,7 @@
           {%- if notebooks.featured_image -%}
             <img src="{{ notebooks.featured_image | image_url: width: 500 }}" alt="{{ notebooks.title }}" class="sfh-card__img" loading="lazy">
           {%- else -%}
-            <img src="https://www.figma.com/api/mcp/asset/c6e4908b-b444-43e3-ab22-736f1fc431e1" alt="Notepads with Feelings" class="sfh-card__img" loading="lazy">
+            <img src="https://www.figma.com/api/mcp/asset/2eca6b7f-30fb-4030-8d0d-84dd702d46b0" alt="Notepads with Feelings" class="sfh-card__img" loading="lazy">
           {%- endif -%}
         </div>
       </a>
@@ -55,7 +55,7 @@
           <span class="sfh-card__detail">6 varieties</span>
         </div>
         <div class="sfh-card__meta">
-          <span class="sfh-card__price">from ₹{{ notebooks.price_min | divided_by: 100 | default: '350' }}</span>
+          <span class="sfh-card__price">from ₹{{ notebooks.price_min | divided_by: 100 | default: '399' }}</span>
           <span class="sfh-card__sub">One notebook for a specific purpose, efficient and handy</span>
         </div>
         <a href="{{ notebooks.url | default: '/collections/notebooks' }}" class="sfh-card__explore">EXPLORE <span class="sfh-arrow">→</span></a>
@@ -70,7 +70,7 @@
           {%- if cards.featured_image -%}
             <img src="{{ cards.featured_image | image_url: width: 500 }}" alt="{{ cards.title }}" class="sfh-card__img" loading="lazy">
           {%- else -%}
-            <img src="https://www.figma.com/api/mcp/asset/439bd0f6-7ad1-478b-830b-dc91ebba914f" alt="Compliment Cards" class="sfh-card__img" loading="lazy">
+            <img src="https://www.figma.com/api/mcp/asset/3073be66-2be7-409b-b59a-1d336ded8004" alt="Compliment Cards" class="sfh-card__img" loading="lazy">
           {%- endif -%}
         </div>
       </a>

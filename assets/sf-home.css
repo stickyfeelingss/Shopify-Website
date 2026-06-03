@@ -223,11 +223,44 @@
   color: #000;
 }
 .sfh-bubble p { margin: 0; }
-.sfh-bubble--pink   { background: #f7b3d0; }
-.sfh-bubble--yellow { background: #ffe700; }
-.sfh-bubble--lblue  { background: var(--sf-lblue); }
-.sfh-bubble--orange { background: #f16421; color: #fff; }
-.sfh-bubble--green  { background: #51b85e; }
+.sfh-bubble--pink   { background: #f7b3d0; --b: #f7b3d0; }
+.sfh-bubble--yellow { background: #ffe700; --b: #ffe700; }
+.sfh-bubble--lblue  { background: var(--sf-lblue); --b: #7ad1ef; }
+.sfh-bubble--orange { background: #f16421; color: #fff; --b: #f16421; }
+.sfh-bubble--green  { background: #51b85e; --b: #51b85e; }
+
+/* Chat bubble tails */
+.sfh-bubble::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.sfh-bubble--tl::after,
+.sfh-bubble--ml::after,
+.sfh-bubble--bl::after {
+  right: -14px;
+  bottom: 14px;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 14px solid var(--b);
+}
+.sfh-bubble--tr::after,
+.sfh-bubble--mr::after,
+.sfh-bubble--br::after {
+  left: -14px;
+  bottom: 14px;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 14px solid var(--b);
+}
+.sfh-bubble--bm::after {
+  bottom: -12px;
+  left: 22px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 12px solid var(--b);
+}
 
 .sfh-bubble--tl { top: 4%;   left: 0%;   transform: rotate(-2deg); }
 .sfh-bubble--tr { top: 2%;   right: 0%;  transform: rotate(3deg); }
